@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Form 3</title>
+</head>
+<body>
+    Разместите на странице пять текстовых полей. При наведении мыши на любое из них, оно должно получить фокус, а в поле появляется id этого поля. При отведении мыши текст пропадает.
+    <form action="">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </form>
+
+    <script>
+        let elems=document.querySelectorAll("input[type=text]");
+        console.log(elems);
+        for (let i=0; i<elems.length; i++){
+            elems[i].onmouseover=function(){
+                elems[i].focus();
+                elems[i].value=elems[i].type;
+            }
+            elems[i].onmouseout=function(){
+                elems[i].blur();
+                elems[i].value="";
+            }
+        }
+    </script>
+</body>
+</html>

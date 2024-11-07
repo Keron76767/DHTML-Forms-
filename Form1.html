@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Form 1</title>
+</head>
+<body>
+    <form>
+        При нажатии на кнопку запросите у пользователя подтверждение его действий (окно confirm). Если выбрано “Да» выведите в текстовое поле сообщение (любое) и активируйте чекбокс (поставьте на нем галочку). Если пользователь нажал “Нет», сбросьте все данные формы (reset).
+        <br>
+        <!--<button id="button">Кпопка</button>-->
+         <input type="button" id="button">
+        <input type="text" id="text">
+        <input type="checkbox" name="" id="chek">
+    </form>
+
+    <script>
+        document.getElementById("button").onclick = function () {
+            if (window.confirm("Хотите?")) {
+                document.getElementById("text").value = "Любимый текст"
+                document.getElementById("chek").checked = true
+            }
+            else document.querySelector('form').reset()
+        }
+    </script>
+
+</body>
+</html>

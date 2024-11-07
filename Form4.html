@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Form 4</title>
+</head>
+<body>
+    Разместите на странице произвольное количество чекбоксов и текстовых полей. Если чекбокс включен, текстовое поле появляется, если выключен  −  пропадает
+
+    <div>
+        <input type="checkbox">
+        <input type="text" hidden>
+    </div>
+    <div>
+        <input type="checkbox">
+        <input type="text" hidden>
+    </div>
+    <div>
+        <input type="checkbox">
+        <input type="text" hidden>
+    </div>
+    <div>
+        <input type="checkbox">
+        <input type="text" hidden>
+    </div>
+
+    <script>
+        document.addEventListener("click",function(){
+        if (event.target.type = "checkbox") event.target.nextElementSibling.hidden = !event.target.checked
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Form 2</title>
+</head>
+<body>
+    Разместите на странице две кнопки. По нажатию на первую текстовое поле блокируется, на вторую  −  разблокируется.
+    <form>
+        <input type="button" id="button1">
+        <!--<button id="button1">Блокировка</button>-->
+        <input type="button" id="button2">
+        <!--<button id="button2">Разблокировка</button>-->
+        <p>
+        <input type="text" id="text">
+    </form>
+
+    <script>
+        button1.onclick = function () {
+            document.getElementById("text").disabled = true;
+        }
+        document.getElementById("button2").onclick = function () {
+            document.getElementById("text").disabled = false;
+        }
+    </script>
+</body>
+</html>
